@@ -1,0 +1,833 @@
+[
+    {
+        "title": "Avatar",
+        "release_year": 2009,
+        "box_office": 2923706026,
+        "film_url": "https://en.wikipedia.org/wiki/Avatar_(2009_film)",
+        "directors": [
+            "James Cameron"
+        ],
+        "countries_of_origin": [
+            "United Kingdom",
+            "United States"
+        ],
+        "production_companies": [
+            "20th Century Fox",
+            "Dune Entertainment",
+            "Ingenious Film Partners",
+            "Lightstorm Entertainment"
+        ]
+    },
+    {
+        "title": "Avengers: Endgame",
+        "release_year": 2019,
+        "box_office": 2797501328,
+        "film_url": "https://en.wikipedia.org/wiki/Avengers:_Endgame",
+        "directors": [
+            "Anthony RussoJoe Russo"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "Avatar: The Way of Water",
+        "release_year": 2022,
+        "box_office": 2320250281,
+        "film_url": "https://en.wikipedia.org/wiki/Avatar:_The_Way_of_Water",
+        "directors": [
+            "James Cameron"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "TSG Entertainment",
+            "Lightstorm Entertainment"
+        ]
+    },
+    {
+        "title": "Titanic",
+        "release_year": 1997,
+        "box_office": 2257844554,
+        "film_url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+        "directors": [
+            "James Cameron"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Paramount Pictures",
+            "20th Century Fox",
+            "Lightstorm Entertainment"
+        ]
+    },
+    {
+        "title": "Star Wars: The Force Awakens",
+        "release_year": 2015,
+        "box_office": 2068223624,
+        "film_url": "https://en.wikipedia.org/wiki/Star_Wars:_The_Force_Awakens",
+        "directors": [
+            "J. J. Abrams"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Lucasfilm Ltd.",
+            "Bad Robot"
+        ]
+    },
+    {
+        "title": "Avengers: Infinity War",
+        "release_year": 2018,
+        "box_office": 2048359754,
+        "film_url": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War",
+        "directors": [
+            "Anthony RussoJoe Russo"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "Spider-Man: No Way Home",
+        "release_year": 2021,
+        "box_office": 1922598800,
+        "film_url": "https://en.wikipedia.org/wiki/Spider-Man:_No_Way_Home",
+        "directors": [
+            "Jon Watts"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Columbia Pictures",
+            "Marvel Studios",
+            "Pascal Pictures"
+        ]
+    },
+    {
+        "title": "Ne Zha 2",
+        "release_year": 2025,
+        "box_office": 1838150155,
+        "film_url": "https://en.wikipedia.org/wiki/Ne_Zha_2",
+        "directors": [
+            "Jiaozi"
+        ],
+        "countries_of_origin": [
+            "China"
+        ],
+        "production_companies": [
+            "Beijing Enlight Media",
+            "Beijing Enlight Pictures"
+        ]
+    },
+    {
+        "title": "Inside Out 2",
+        "release_year": 2024,
+        "box_office": 1698863816,
+        "film_url": "https://en.wikipedia.org/wiki/Inside_Out_2",
+        "directors": [
+            "Kelsey Mann"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Pixar Animation Studios"
+        ]
+    },
+    {
+        "title": "Jurassic World",
+        "release_year": 2015,
+        "box_office": 1671537444,
+        "film_url": "https://en.wikipedia.org/wiki/Jurassic_World",
+        "directors": [
+            "Colin Trevorrow"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "Amblin Entertainment",
+            "Legendary Pictures",
+            "The Kennedy/Marshall Company"
+        ]
+    },
+    {
+        "title": "The Lion King",
+        "release_year": 2019,
+        "box_office": 1656943394,
+        "film_url": "https://en.wikipedia.org/wiki/The_Lion_King_(2019_film)",
+        "directors": [
+            "Jon Favreau"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Pictures"
+        ]
+    },
+    {
+        "title": "The Avengers",
+        "release_year": 2012,
+        "box_office": 1518815515,
+        "film_url": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+        "directors": [
+            "Joss Whedon"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "Furious 7",
+        "release_year": 2015,
+        "box_office": 1515341399,
+        "film_url": "https://en.wikipedia.org/wiki/Furious_7",
+        "directors": [
+            "James Wan"
+        ],
+        "countries_of_origin": [
+            "United States China"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "MRC",
+            "Original Film",
+            "One Race Films",
+            "China Film Co., Ltd.",
+            "Dentsu Inc."
+        ]
+    },
+    {
+        "title": "Top Gun: Maverick",
+        "release_year": 2022,
+        "box_office": 1495696292,
+        "film_url": "https://en.wikipedia.org/wiki/Top_Gun:_Maverick",
+        "directors": [
+            "Joseph Kosinski"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Paramount Pictures",
+            "Skydance",
+            "Don Simpson/Jerry Bruckheimer Films"
+        ]
+    },
+    {
+        "title": "Frozen 2",
+        "release_year": 2019,
+        "box_office": 1450026933,
+        "film_url": "https://en.wikipedia.org/wiki/Frozen_2",
+        "directors": [
+            "Chris Buck",
+            "Jennifer Lee"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Animation Studios"
+        ]
+    },
+    {
+        "title": "Barbie",
+        "release_year": 2023,
+        "box_office": 1447038421,
+        "film_url": "https://en.wikipedia.org/wiki/Barbie_(film)",
+        "directors": [
+            "Greta Gerwig"
+        ],
+        "countries_of_origin": [
+            "United States",
+            "United Kingdom"
+        ],
+        "production_companies": [
+            "Heyday Films",
+            "LuckyChap Entertainment",
+            "Mattel Films"
+        ]
+    },
+    {
+        "title": "Avengers: Age of Ultron",
+        "release_year": 2015,
+        "box_office": 1402809540,
+        "film_url": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron",
+        "directors": [
+            "Joss Whedon"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "The Super Mario Bros. Movie",
+        "release_year": 2023,
+        "box_office": 1362566989,
+        "film_url": "https://en.wikipedia.org/wiki/The_Super_Mario_Bros._Movie",
+        "directors": [
+            "Aaron Horvath",
+            "Michael Jelenic"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "Illumination"
+        ]
+    },
+    {
+        "title": "Black Panther",
+        "release_year": 2018,
+        "box_office": 1347280838,
+        "film_url": "https://en.wikipedia.org/wiki/Black_Panther_(film)",
+        "directors": [
+            "Ryan Coogler"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Deathly Hallows – Part 2",
+        "release_year": 2011,
+        "box_office": 1342139727,
+        "film_url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2",
+        "directors": [
+            "David Yates"
+        ],
+        "countries_of_origin": [
+            "United Kingdom",
+            "United States"
+        ],
+        "production_companies": [
+            "Warner Bros. Pictures",
+            "Heyday Films"
+        ]
+    },
+    {
+        "title": "Deadpool & Wolverine",
+        "release_year": 2024,
+        "box_office": 1338073645,
+        "film_url": "https://en.wikipedia.org/wiki/Deadpool_%26_Wolverine",
+        "directors": [
+            "Shawn Levy"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios",
+            "Maximum Effort",
+            "21 Laps Entertainment"
+        ]
+    },
+    {
+        "title": "Star Wars: The Last Jedi",
+        "release_year": 2017,
+        "box_office": 1332539889,
+        "film_url": "https://en.wikipedia.org/wiki/Star_Wars:_The_Last_Jedi",
+        "directors": [
+            "Rian Johnson"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Lucasfilm Ltd."
+        ]
+    },
+    {
+        "title": "Jurassic World: Fallen Kingdom",
+        "release_year": 2018,
+        "box_office": 1308473425,
+        "film_url": "https://en.wikipedia.org/wiki/Jurassic_World:_Fallen_Kingdom",
+        "directors": [
+            "J. A. Bayona"
+        ],
+        "countries_of_origin": [
+            "China",
+            "United States"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "Amblin Entertainment",
+            "Legendary Pictures",
+            "The Kennedy/Marshall Company",
+            "Perfect World Pictures"
+        ]
+    },
+    {
+        "title": "Frozen",
+        "release_year": 2013,
+        "box_office": 1290000000,
+        "film_url": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+        "directors": [
+            "Chris Buck",
+            "Jennifer Lee"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Animation Studios"
+        ]
+    },
+    {
+        "title": "Beauty and the Beast",
+        "release_year": 2017,
+        "box_office": 1263521126,
+        "film_url": "https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(2017_film)",
+        "directors": [
+            "Bill Condon"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Pictures",
+            "Mandeville Films"
+        ]
+    },
+    {
+        "title": "Incredibles 2",
+        "release_year": 2018,
+        "box_office": 1242805359,
+        "film_url": "https://en.wikipedia.org/wiki/Incredibles_2",
+        "directors": [
+            "Brad Bird"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Pixar Animation Studios"
+        ]
+    },
+    {
+        "title": "The Fate of the Furious",
+        "release_year": 2017,
+        "box_office": 81238764765,
+        "film_url": "https://en.wikipedia.org/wiki/The_Fate_of_the_Furious",
+        "directors": [
+            "F. Gary Gray"
+        ],
+        "countries_of_origin": [
+            "United States",
+            "China"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "Original Film",
+            "One Race Films",
+            "China Film Co., Ltd.",
+            "Dentsu Inc."
+        ]
+    },
+    {
+        "title": "Iron Man 3",
+        "release_year": 2013,
+        "box_office": 1214811252,
+        "film_url": "https://en.wikipedia.org/wiki/Iron_Man_3",
+        "directors": [
+            "Shane Black"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "Minions",
+        "release_year": 2015,
+        "box_office": 1159444662,
+        "film_url": "https://en.wikipedia.org/wiki/Minions_(film)",
+        "directors": [
+            "Pierre Coffin",
+            "Kyle Balda"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "Illumination Entertainment"
+        ]
+    },
+    {
+        "title": "Captain America: Civil War",
+        "release_year": 2016,
+        "box_office": 1153337496,
+        "film_url": "https://en.wikipedia.org/wiki/Captain_America:_Civil_War",
+        "directors": [
+            "Anthony RussoJoe Russo"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "Aquaman",
+        "release_year": 2018,
+        "box_office": 1148528393,
+        "film_url": "https://en.wikipedia.org/wiki/Aquaman_(film)",
+        "directors": [
+            "James Wan"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Warner Bros. Pictures",
+            "DC Entertainment",
+            "DC Films",
+            "RatPac Entertainment",
+            "The Safran Company",
+            "Cruel and Unusual Films",
+            "Mad Ghost Productions"
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "release_year": 2003,
+        "box_office": 1147997407,
+        "film_url": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King",
+        "directors": [
+            "Peter Jackson"
+        ],
+        "countries_of_origin": [
+            "New Zealand",
+            "Germany",
+            "United States"
+        ],
+        "production_companies": [
+            "WingNut Films",
+            "New Line Cinema"
+        ]
+    },
+    {
+        "title": "Spider-Man: Far From Home",
+        "release_year": 2019,
+        "box_office": 1132679685,
+        "film_url": "https://en.wikipedia.org/wiki/Spider-Man:_Far_From_Home",
+        "directors": [
+            "Jon Watts"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Columbia Pictures",
+            "Marvel Studios",
+            "Pascal Pictures"
+        ]
+    },
+    {
+        "title": "Captain Marvel",
+        "release_year": 2019,
+        "box_office": 1128274794,
+        "film_url": "https://en.wikipedia.org/wiki/Captain_Marvel_(film)",
+        "directors": [
+            "Anna BodenRyan Fleck"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Marvel Studios"
+        ]
+    },
+    {
+        "title": "Transformers: Dark of the Moon",
+        "release_year": 2011,
+        "box_office": 1123794079,
+        "film_url": "https://en.wikipedia.org/wiki/Transformers:_Dark_of_the_Moon",
+        "directors": [
+            "Michael Bay"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Paramount Pictures",
+            "DreamWorks Pictures",
+            "Hasbro Studios",
+            "di Bonaventura Pictures"
+        ]
+    },
+    {
+        "title": "Skyfall",
+        "release_year": 2012,
+        "box_office": 1108594137,
+        "film_url": "https://en.wikipedia.org/wiki/Skyfall",
+        "directors": [
+            "Sam Mendes"
+        ],
+        "countries_of_origin": [
+            "United Kingdom",
+            "United States"
+        ],
+        "production_companies": [
+            "Eon Productions",
+            "Metro-Goldwyn-Mayer",
+            "Columbia Pictures"
+        ]
+    },
+    {
+        "title": "Transformers: Age of Extinction",
+        "release_year": 2014,
+        "box_office": 1104054072,
+        "film_url": "https://en.wikipedia.org/wiki/Transformers:_Age_of_Extinction",
+        "directors": [
+            "Michael Bay"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Paramount Pictures",
+            "Hasbro Studios",
+            "di Bonaventura Pictures",
+            "China Movie Channel"
+        ]
+    },
+    {
+        "title": "The Dark Knight Rises",
+        "release_year": 2012,
+        "box_office": 1081169825,
+        "film_url": "https://en.wikipedia.org/wiki/The_Dark_Knight_Rises",
+        "directors": [
+            "Christopher Nolan"
+        ],
+        "countries_of_origin": [
+            "United States",
+            "United Kingdom"
+        ],
+        "production_companies": [
+            "Warner Bros. Pictures",
+            "Legendary Pictures",
+            "DC Entertainment",
+            "Syncopy Inc."
+        ]
+    },
+    {
+        "title": "Joker",
+        "release_year": 2019,
+        "box_office": 1074458282,
+        "film_url": "https://en.wikipedia.org/wiki/Joker_(2019_film)",
+        "directors": [
+            "Todd Phillips"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Warner Bros. Pictures",
+            "DC Films",
+            "Village Roadshow Pictures",
+            "Bron Creative"
+        ]
+    },
+    {
+        "title": "Star Wars: The Rise of Skywalker",
+        "release_year": 2019,
+        "box_office": 1074144248,
+        "film_url": "https://en.wikipedia.org/wiki/Star_Wars:_The_Rise_of_Skywalker",
+        "directors": [
+            "J. J. Abrams"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Lucasfilm Ltd.",
+            "Bad Robot"
+        ]
+    },
+    {
+        "title": "Toy Story 4",
+        "release_year": 2019,
+        "box_office": 1073394593,
+        "film_url": "https://en.wikipedia.org/wiki/Toy_Story_4",
+        "directors": [
+            "Josh Cooley"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Pixar Animation Studios"
+        ]
+    },
+    {
+        "title": "Toy Story 3",
+        "release_year": 2010,
+        "box_office": 1066970811,
+        "film_url": "https://en.wikipedia.org/wiki/Toy_Story_3",
+        "directors": [
+            "Lee Unkrich"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Pixar Animation Studios"
+        ]
+    },
+    {
+        "title": "Pirates of the Caribbean: Dead Man's Chest",
+        "release_year": 2006,
+        "box_office": 1066179747,
+        "film_url": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_Dead_Man%27s_Chest",
+        "directors": [
+            "Gore Verbinski"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Pictures",
+            "Jerry Bruckheimer Films"
+        ]
+    },
+    {
+        "title": "Rogue One: A Star Wars Story",
+        "release_year": 2016,
+        "box_office": 1057420387,
+        "film_url": "https://en.wikipedia.org/wiki/Rogue_One:_A_Star_Wars_Story",
+        "directors": [
+            "Gareth Edwards"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Lucasfilm Ltd."
+        ]
+    },
+    {
+        "title": "Aladdin",
+        "release_year": 2019,
+        "box_office": 1050693953,
+        "film_url": "https://en.wikipedia.org/wiki/Aladdin_(2019_film)",
+        "directors": [
+            "Guy Ritchie"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Pictures",
+            "Rideback"
+        ]
+    },
+    {
+        "title": "Moana 2",
+        "release_year": 2024,
+        "box_office": 1050224044,
+        "film_url": "https://en.wikipedia.org/wiki/Moana_2",
+        "directors": [
+            "David Derrick Jr.",
+            "Jason Hand",
+            "Dana Ledoux Miller"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Animation Studios"
+        ]
+    },
+    {
+        "title": "Star Wars: Episode I – The Phantom Menace",
+        "release_year": 1999,
+        "box_office": 1046515409,
+        "film_url": "https://en.wikipedia.org/wiki/Star_Wars:_Episode_I_%E2%80%93_The_Phantom_Menace",
+        "directors": [
+            "George Lucas"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Lucasfilm Ltd."
+        ]
+    },
+    {
+        "title": "Pirates of the Caribbean: On Stranger Tides",
+        "release_year": 2011,
+        "box_office": 1045713802,
+        "film_url": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean:_On_Stranger_Tides",
+        "directors": [
+            "Rob Marshall"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Walt Disney Pictures",
+            "Jerry Bruckheimer Films"
+        ]
+    },
+    {
+        "title": "Jurassic Park",
+        "release_year": 1993,
+        "box_office": 1037535230,
+        "film_url": "https://en.wikipedia.org/wiki/Jurassic_Park_(film)",
+        "directors": [
+            "Steven Spielberg"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "Amblin Entertainment"
+        ]
+    },
+    {
+        "title": "Despicable Me 3",
+        "release_year": 2017,
+        "box_office": 1034800131,
+        "film_url": "https://en.wikipedia.org/wiki/Despicable_Me_3",
+        "directors": [
+            "Pierre Coffin",
+            "Kyle Balda"
+        ],
+        "countries_of_origin": [
+            "United States"
+        ],
+        "production_companies": [
+            "Universal Pictures",
+            "Illumination"
+        ]
+    }
+]
