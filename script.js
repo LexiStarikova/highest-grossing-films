@@ -1,8 +1,30 @@
 // Add this at the top level of your script
 let films = []; // Global variable to store films data
+let statsVisible = false;
 
-// Load and display films from JSON file
 document.addEventListener("DOMContentLoaded", function () {
+    // Initialize UI elements
+    const toggleButton = document.getElementById('toggleStats');
+    const aggregationSelect = document.getElementById('aggregationType');
+    const detailedStats = document.getElementById('detailedStats');
+
+    // Set up event listeners
+    toggleButton.addEventListener('click', function() {
+        statsVisible = !statsVisible;
+        detailedStats.style.display = statsVisible ? 'flex' : 'none';
+        aggregationSelect.style.display = statsVisible ? 'inline-block' : 'none';
+        toggleButton.textContent = statsVisible ? 'Hide Detailed Statistics' : 'See Detailed Statistics';
+        
+        if (statsVisible) {
+            updateDetailedStats(aggregationSelect.value);
+        }
+    });
+
+    aggregationSelect.addEventListener('change', function() {
+        updateDetailedStats(this.value);
+    });
+
+    // Load data
     fetch("films.json")
         .then(response => response.json())
         .then(data => {
@@ -11,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading data:", error));
 });
-
 
 function displayFilms(films) {
     const tableBody = document.getElementById("film-table-body");
@@ -127,7 +148,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: film.box_office / 1000000000, 
+            r: film.box_office / 10000000000, 
             title: film.title,
             revenue: film.box_office
         }));
@@ -227,26 +248,6 @@ function applyFilters() {
         row.style.display = showRow ? '' : 'none';
     });
 }
-
-let statsVisible = false;
-const toggleButton = document.getElementById('toggleStats');
-const aggregationSelect = document.getElementById('aggregationType');
-const detailedStats = document.getElementById('detailedStats');
-
-toggleButton.addEventListener('click', function() {
-    statsVisible = !statsVisible;
-    detailedStats.style.display = statsVisible ? 'flex' : 'none';
-    aggregationSelect.style.display = statsVisible ? 'inline-block' : 'none';
-    toggleButton.textContent = statsVisible ? 'Hide Detailed Statistics' : 'See Detailed Statistics';
-    
-    if (statsVisible) {
-        updateDetailedStats(aggregationSelect.value);
-    }
-});
-
-aggregationSelect.addEventListener('change', function() {
-    updateDetailedStats(this.value);
-});
 
 function updateDetailedStats(aggregationType) {
     // Add console.log for debugging
