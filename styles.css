@@ -176,10 +176,30 @@ h1 {
 
 /* Detailed statistics charts */
 .detailed-chart {
-    width: 80%;
     height: 350px;
     padding: 1rem;
     background: white;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#regenerateBubble {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#regenerateBubble:hover {
+    background-color: #1976D2;
 }

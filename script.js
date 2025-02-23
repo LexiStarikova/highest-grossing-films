@@ -33,6 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
             displayFilms(data);
         })
         .catch(error => console.error("Error loading data:", error));
+
+    // Add bubble chart regeneration
+    document.getElementById('regenerateBubble').addEventListener('click', function() {
+        plotBoxOfficeChart(films); // This will recreate the bubble chart with new random y-values
+    });
 });
 
 function displayFilms(films) {
