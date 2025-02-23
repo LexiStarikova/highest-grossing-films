@@ -135,3 +135,33 @@ h1 {
 .goto-table:hover {
     background-color: #1976D2;
 }
+
+.statistics-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.stats-button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.stats-button:hover {
+    background-color: #1976D2;
+}
+
+.stats-select {
+    padding: 8px 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+}

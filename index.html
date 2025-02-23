@@ -27,6 +27,25 @@
             </div>
         </div>
 
+        <!-- After the existing charts-section -->
+        <div class="statistics-controls">
+            <button id="toggleStats" class="stats-button">See Detailed Statistics</button>
+            <select id="aggregationType" class="stats-select" style="display: none;">
+                <option value="max">Maximum</option>
+                <option value="avg">Average</option>
+                <option value="total">Total</option>
+            </select>
+        </div>
+
+        <div id="detailedStats" class="charts-section" style="display: none;">
+            <div class="chart-container">
+                <canvas id="companiesChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="directorsChart"></canvas>
+            </div>
+        </div>
+
         <!-- Table section -->
         <div id="table-section" class="table-container">
             <table>

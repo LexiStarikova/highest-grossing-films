@@ -123,7 +123,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: film.box_office / 100, // Minimum radius of 5
+            r: film.box_office / 100000, 
             title: film.title,
             revenue: film.box_office
         }));
@@ -221,5 +221,124 @@ function applyFilters() {
             }
         }
         row.style.display = showRow ? '' : 'none';
+    });
+}
+
+let statsVisible = false;
+const toggleButton = document.getElementById('toggleStats');
+const aggregationSelect = document.getElementById('aggregationType');
+const detailedStats = document.getElementById('detailedStats');
+
+toggleButton.addEventListener('click', function() {
+    statsVisible = !statsVisible;
+    detailedStats.style.display = statsVisible ? 'flex' : 'none';
+    aggregationSelect.style.display = statsVisible ? 'inline-block' : 'none';
+    toggleButton.textContent = statsVisible ? 'Hide Detailed Statistics' : 'See Detailed Statistics';
+    
+    if (statsVisible) {
+        updateDetailedStats(aggregationSelect.value);
+    }
+});
+
+aggregationSelect.addEventListener('change', function() {
+    updateDetailedStats(this.value);
+});
+
+function updateDetailedStats(aggregationType) {
+    const companiesData = aggregateData(films, 'production_companies', 'box_office', aggregationType);
+    const directorsData = aggregateData(films, 'directors', 'box_office', aggregationType);
+    
+    plotDetailedChart('companiesChart', companiesData, 
+        `Top 10 Production Companies by ${aggregationType} Box Office Revenue`);
+    plotDetailedChart('directorsChart', directorsData, 
+        `Top 10 Directors by ${aggregationType} Box Office Revenue`);
+}
+
+function aggregateData(films, groupKey, valueKey, aggregationType) {
+    // Split multiple values (for companies/directors separated by commas)
+    const data = new Map();
+    
+    films.forEach(film => {
+        const items = film[groupKey].split(/,\s*/);
+        items.forEach(item => {
+            if (!data.has(item)) {
+                data.set(item, []);
+            }
+            data.get(item).push(film[valueKey]);
+        });
+    });
+    
+    // Calculate aggregation
+    const aggregated = Array.from(data.entries()).map(([key, values]) => ({
+        name: key,
+        value: calculateAggregation(values, aggregationType)
+    }));
+    
+    // Sort and get top 10
+    return aggregated
+        .sort((a, b) => b.value - a.value)
+        .slice(0, 10);
+}
+
+function calculateAggregation(values, type) {
+    switch(type) {
+        case 'max':
+            return Math.max(...values);
+        case 'avg':
+            return values.reduce((a, b) => a + b, 0) / values.length;
+        case 'total':
+            return values.reduce((a, b) => a + b, 0);
+        default:
+            return 0;
+    }
+}
+
+function plotDetailedChart(canvasId, data, title) {
+    const ctx = document.getElementById(canvasId).getContext('2d');
+    
+    // Destroy existing chart if it exists
+    if (window[canvasId]) {
+        window[canvasId].destroy();
+    }
+    
+    window[canvasId] = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.map(d => d.name),
+            datasets: [{
+                data: data.map(d => d.value),
+                backgroundColor: data.map((_, i) => 
+                    `hsla(${(i * 360 / data.length)}, 70%, 60%, 0.7)`
+                ),
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: title,
+                    font: { size: 16 }
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => `Revenue: $${formatCurrency(context.raw)}`
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: value => `$${formatCurrency(value)}`
+                    }
+                }
+            }
+        }
     });
 }
