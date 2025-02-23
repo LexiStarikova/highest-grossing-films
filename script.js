@@ -143,13 +143,13 @@ function plotBoxOfficeChart(films) {
     // Create bubble chart
     const bubbleCtx = document.getElementById("bubbleChart").getContext("2d");
     
-    // Use only top 10 films and apply square root scaling
+    // Use only top 10 films and apply cube root scaling
     const bubbleData = sortedFilms
         .filter(film => film.box_office && film.release_year)
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.sqrt(film.box_office) / 5000, // Square root scaling with division
+            r: Math.cbrt(film.box_office) / 100, // Cube root scaling
             title: film.title,
             revenue: film.box_office
         }));
@@ -173,7 +173,7 @@ function plotBoxOfficeChart(films) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Top 10 Films by Year and Box Office Revenue (Bubble size: square root scale)',
+                    text: 'Top 10 Films by Year and Box Office Revenue (Bubble size: cube root scale)',
                     font: { size: 24 }
                 },
                 legend: {

@@ -162,11 +162,19 @@ h1 {
     cursor: pointer;
 }
 
+/* Detailed statistics section */
+#detailedStats {
+    display: flex;
+    flex-direction: row !important; /* Force horizontal layout */
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
 /* Detailed statistics charts */
 .detailed-chart {
-    width: 95%;
-    height: 150px; /* Short height for detailed stats */
-    margin: 0.5rem auto;
+    width: 47%; /* Allow two charts to fit side by side with gap */
+    height: 300px; /* Twice as tall as before */
     padding: 0.5rem;
     background: white;
     border-radius: var(--border-radius);
