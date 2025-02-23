@@ -101,14 +101,18 @@ function plotBoxOfficeChart(films) {
     // Create bubble chart
     const bubbleCtx = document.getElementById("bubbleChart").getContext("2d");
     
-    // Generate random y-values between 1-100 for visual spread
-    const bubbleData = films.map(film => ({
-        x: film.release_year,
-        y: Math.random() * 100,
-        r: Math.sqrt(film.box_office) / 100000, // Scale the radius based on box office
-        title: film.title,
-        revenue: film.box_office
-    }));
+    // Filter out invalid data and generate bubble data
+    const bubbleData = films
+        .filter(film => film.box_office && film.release_year) // Ensure we have valid data
+        .map(film => ({
+            x: parseInt(film.release_year),
+            y: Math.random() * 100,
+            r: Math.max(Math.sqrt(film.box_office) / 100000, 5), // Minimum radius of 5
+            title: film.title,
+            revenue: film.box_office
+        }));
+
+    console.log('Bubble data:', bubbleData); // Debug log
 
     new Chart(bubbleCtx, {
         type: 'bubble',
