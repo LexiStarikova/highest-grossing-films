@@ -319,11 +319,11 @@ function calculateAggregation(values, type) {
     if (!values.length) return 0;
     
     switch(type) {
-        case 'max':
+        case 'Max':
             return Math.max(...values);
-        case 'avg':
+        case 'Avg':
             return values.reduce((a, b) => a + b, 0) / values.length;
-        case 'total':
+        case 'Total':
             return values.reduce((a, b) => a + b, 0);
         default:
             return 0;
