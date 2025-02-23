@@ -1,6 +1,7 @@
 // Add this at the top level of your script
 let films = []; // Global variable to store films data
 let statsVisible = false;
+let charts = {}; // Object to store chart instances
 
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize UI elements
@@ -315,11 +316,11 @@ function plotDetailedChart(canvasId, data, title) {
     console.log('Plotting chart:', canvasId, 'with data:', data); // Debug log
     
     // Destroy existing chart if it exists
-    if (window[canvasId]) {
-        window[canvasId].destroy();
+    if (charts[canvasId]) {
+        charts[canvasId].destroy();
     }
     
-    window[canvasId] = new Chart(ctx, {
+    charts[canvasId] = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: data.map(d => d.name),
