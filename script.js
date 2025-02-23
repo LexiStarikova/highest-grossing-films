@@ -148,7 +148,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: film.box_office / 10000000000, 
+            r: Math.sqrt(film.box_office) / 1000000, 
             title: film.title,
             revenue: film.box_office
         }));
