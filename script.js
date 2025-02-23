@@ -149,7 +149,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.pow(film.box_office, 1/5) / 20, // 5th root scaling
+            r: Math.pow(film.box_office, 1/5) / 2, // 5th root scaling
             title: film.title,
             revenue: film.box_office
         }));
@@ -339,8 +339,8 @@ function plotDetailedChart(canvasId, data, title) {
                 title: {
                     display: true,
                     text: title,
-                    font: { size: 20 },
-                    padding: { bottom: 10 }
+                    font: { size: 24 },
+                    padding: { bottom: 20 }
                 },
                 legend: {
                     display: false
@@ -356,23 +356,23 @@ function plotDetailedChart(canvasId, data, title) {
                     beginAtZero: true,
                     ticks: {
                         callback: value => `$${formatCurrency(value)}`,
-                        font: { size: 11 }
+                        font: { size: 12 }
                     }
                 },
                 x: {
                     ticks: {
                         maxRotation: 45,
                         minRotation: 45,
-                        font: { size: 11 }
+                        font: { size: 12 }
                     }
                 }
             },
             layout: {
                 padding: {
-                    left: 5,
-                    right: 15,
-                    top: 0,
-                    bottom: 5
+                    left: 10,
+                    right: 30,
+                    top: 20,
+                    bottom: 20
                 }
             }
         }
