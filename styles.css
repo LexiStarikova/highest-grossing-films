@@ -93,3 +93,19 @@ canvas {
     display: block;
     margin: auto;
 }
+
+.charts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.chart-container {
+    width: 100%;
+    height: 600px;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
