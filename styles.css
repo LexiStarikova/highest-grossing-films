@@ -55,13 +55,15 @@ body {
     background: white;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 95%;
+    width: 98%;
     margin: 2rem auto;
+    padding: 1rem;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 1000px;
 }
 
 th, td {
