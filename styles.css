@@ -51,9 +51,14 @@ body {
     flex-direction: column;
 }
 
-/* Specific height for box office chart */
+/* Specific height and padding for box office chart container */
 #boxOfficeChart {
     height: 400px !important;
+}
+
+.chart-container:has(#boxOfficeChart) {
+    height: 450px;  /* Reduced container height */
+    padding: 0.5rem;  /* Reduced padding */
 }
 
 /* Table styling */
@@ -115,7 +120,7 @@ canvas {
 .charts-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;  /* Default gap */
+    gap: 2rem;
     margin: 2rem 0;
 }
 
@@ -178,7 +183,7 @@ h1 {
 #detailedStats {
     display: flex;
     flex-direction: column;
-    gap: 1rem;  /* Reduced from 2rem */
+    gap: 1rem;
     margin: 1rem 0;
     width: 100%;
 }
