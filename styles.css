@@ -1,0 +1,95 @@
+/* Modern CSS reset and variables */
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #FFC107;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Controls styling */
+.controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#search {
+    padding: 10px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    width: 300px;
+    font-size: 16px;
+}
+
+/* Chart styling */
+.chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Table styling */
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.column-filter {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+    
+    #search {
+        width: 100%;
+    }
+}
+
+canvas {
+    display: block;
+    margin: auto;
+}

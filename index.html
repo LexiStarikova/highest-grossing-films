@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highest-Grossing Films</title>
+    <title>Highest-Grossing Films Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Highest-Grossing Films</h1>
-    <input type="text" id="search" placeholder="Search for a film...">
-    <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Release Year</th>
-                <th>Director</th>
-                <th>Box Office</th>
-                <th>Country</th>
-                <th>Production Company</th>
-            </tr>
-        </thead>
-        <tbody id="film-table-body">
-            <!-- Data will be inserted here -->
-        </tbody>
-    </table>
+    <div class="container">
+        <h1>Highest-Grossing Films Dashboard</h1>
+        
+        <!-- Search and controls section -->
+        <div class="controls">
+            <input type="text" id="search" placeholder="🔍 Search for any film...">
+            <button id="toggleChart">Toggle Chart View</button>
+        </div>
+
+        <!-- Chart section -->
+        <div class="chart-container">
+            <canvas id="boxOfficeChart"></canvas>
+        </div>
+
+        <!-- Table section -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="text" class="column-filter" data-column="0" placeholder="Filter Title"></th>
+                        <th><input type="text" class="column-filter" data-column="1" placeholder="Filter Year"></th>
+                        <th><input type="text" class="column-filter" data-column="2" placeholder="Filter Director"></th>
+                        <th><input type="text" class="column-filter" data-column="3" placeholder="Filter Box Office"></th>
+                        <th><input type="text" class="column-filter" data-column="4" placeholder="Filter Country"></th>
+                        <th><input type="text" class="column-filter" data-column="5" placeholder="Filter Studio"></th>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <th>Release Year</th>
+                        <th>Director</th>
+                        <th>Box Office</th>
+                        <th>Country</th>
+                        <th>Production Company</th>
+                    </tr>
+                </thead>
+                <tbody id="film-table-body">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
