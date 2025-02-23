@@ -148,7 +148,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.log10(film.box_office) / 2, // Apply logarithm for better bubble sizing
+            r: Math.log10(film.box_office) * 10, // Apply logarithm for better bubble sizing
             title: film.title,
             revenue: film.box_office
         }));
@@ -172,7 +172,7 @@ function plotBoxOfficeChart(films) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Films by Year and Box Office Revenue (Bubble size: log scale)',
+                    text: 'Films by Year and Box Office Revenue (Bubble Size: Logarithmic Scale)',
                     font: { size: 24 }
                 },
                 legend: {
