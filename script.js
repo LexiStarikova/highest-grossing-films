@@ -255,6 +255,9 @@ function updateDetailedStats(aggregationType) {
     const companiesData = aggregateData(films, 'production_companies', 'box_office', aggregationType);
     const directorsData = aggregateData(films, 'directors', 'box_office', aggregationType);
     
+    console.log('Companies data:', companiesData);
+    console.log('Directors data:', directorsData);
+    
     plotDetailedChart('companiesChart', companiesData, 
         `Top 10 Production Companies by ${aggregationType} Box Office Revenue`);
     plotDetailedChart('directorsChart', directorsData, 
