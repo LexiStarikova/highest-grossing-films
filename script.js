@@ -123,7 +123,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: film.box_office, // Minimum radius of 5
+            r: film.box_office / 100, // Minimum radius of 5
             title: film.title,
             revenue: film.box_office
         }));
