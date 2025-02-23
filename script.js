@@ -17,9 +17,10 @@ function displayFilms(films) {
         row.innerHTML = `
             <td>${film.title}</td>
             <td>${film.release_year}</td>
-            <td>${film.director}</td>
+            <td>${film.directors}</td>
             <td>${film.box_office}</td>
-            <td>${film.country}</td>
+            <td>${film.countries_of_origin}</td>
+            <td>${film.production_companies}</td>
         `;
         tableBody.appendChild(row);
     });
