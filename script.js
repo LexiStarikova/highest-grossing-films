@@ -374,10 +374,10 @@ function plotDetailedChart(canvasId, data, title) {
             },
             layout: {
                 padding: {
-                    left: 10,
-                    right: 30,
+                    left: 20,
+                    right: 40,
                     top: 20,
-                    bottom: 20
+                    bottom: 40
                 }
             }
         }
