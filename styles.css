@@ -79,7 +79,7 @@ table {
 }
 
 th, td {
-    padding: 15px 20px;
+    padding: 15px 30px 15px 20px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     min-width: 100px;
@@ -190,7 +190,7 @@ h1 {
 
 /* Detailed statistics charts */
 .detailed-chart {
-    height: 600px;
+    height: 400px;
     width: 100%;
     padding: 1rem;
     background: white;
