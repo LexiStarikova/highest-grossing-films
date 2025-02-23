@@ -167,17 +167,17 @@ h1 {
 /* Detailed statistics section */
 #detailedStats {
     display: flex;
-    flex-direction: row !important;
-    gap: 0.5rem;
-    justify-content: space-between;
+    flex-direction: column !important;
+    gap: 2rem;
     margin: 1rem 0;
     width: 100%;
 }
 
 /* Detailed statistics charts */
 .detailed-chart {
-    height: 350px;
-    padding: 1rem;
+    height: 600px;  /* Match the height of main charts */
+    width: 100%;    /* Take full width */
+    padding: 2rem;  /* Match main chart padding */
     background: white;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
