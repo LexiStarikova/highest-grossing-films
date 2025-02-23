@@ -160,13 +160,15 @@ function plotBoxOfficeChart(films) {
         bubbleChart.destroy();
     }
     
-    // Use only top 20 films and apply 5th root scaling
-    const bubbleData = [...films].sort((a, b) => b.box_office - a.box_office).slice(0, 20)
+    // Create bubble chart data and configuration
+    const bubbleData = [...films]
+        .sort((a, b) => b.box_office - a.box_office)
+        .slice(0, 20)
         .filter(film => film.box_office && film.release_year)
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.pow(film.box_office, 1/5) / 2, // 5th root scaling
+            r: Math.pow(film.box_office, 1/5) / 2,
             title: film.title,
             revenue: film.box_office
         }));
