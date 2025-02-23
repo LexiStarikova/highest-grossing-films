@@ -38,16 +38,32 @@ function formatCurrency(value) {
     }).format(value);
 }
 
-// Implement search functionality
-document.getElementById("search").addEventListener("input", function () {
-    let searchTerm = this.value.toLowerCase();
-    let rows = document.querySelectorAll("tbody tr");
-    
-    rows.forEach(row => {
-        let title = row.cells[0].textContent.toLowerCase();
-        row.style.display = title.includes(searchTerm) ? "" : "none";
-    });
+// Update the search functionality
+document.getElementById("search").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        let searchTerm = this.value.toLowerCase();
+        let rows = document.querySelectorAll("tbody tr");
+        
+        rows.forEach(row => {
+            let title = row.cells[0].textContent.toLowerCase();
+            row.style.display = title.includes(searchTerm) ? "" : "none";
+        });
+
+        // Scroll to table
+        document.getElementById("table-section").scrollIntoView({ 
+            behavior: "smooth",
+            block: "start"
+        });
+    }
 });
+
+// Add scroll to table function
+function scrollToTable() {
+    document.getElementById("table-section").scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
+    });
+}
 
 function plotBoxOfficeChart(films) {
     const ctx = document.getElementById("boxOfficeChart").getContext("2d");
@@ -107,7 +123,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.max(Math.sqrt(film.box_office) / 100000, 5), // Minimum radius of 5
+            r: Math.max(Math.sqrt(film.box_office) / 1000, 5), // Minimum radius of 5
             title: film.title,
             revenue: film.box_office
         }));
