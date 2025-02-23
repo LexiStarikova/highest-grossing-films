@@ -149,7 +149,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.log2(film.box_office) * 2, // Apply logarithm for better bubble sizing
+            r: Math.log2(film.box_office), // Apply logarithm for better bubble sizing
             title: film.title,
             revenue: film.box_office
         }));
@@ -313,9 +313,7 @@ function calculateAggregation(values, type) {
 
 function plotDetailedChart(canvasId, data, title) {
     const ctx = document.getElementById(canvasId).getContext('2d');
-    console.log('Plotting chart:', canvasId, 'with data:', data); // Debug log
     
-    // Destroy existing chart if it exists
     if (charts[canvasId]) {
         charts[canvasId].destroy();
     }
@@ -329,7 +327,9 @@ function plotDetailedChart(canvasId, data, title) {
                 backgroundColor: data.map((_, i) => 
                     `hsla(${(i * 360 / data.length)}, 70%, 60%, 0.7)`
                 ),
-                borderWidth: 1
+                borderWidth: 1,
+                barPercentage: 0.8, // Make bars wider
+                categoryPercentage: 0.9 // Reduce gap between bars
             }]
         },
         options: {
@@ -339,7 +339,8 @@ function plotDetailedChart(canvasId, data, title) {
                 title: {
                     display: true,
                     text: title,
-                    font: { size: 24 }
+                    font: { size: 24 },
+                    padding: { bottom: 20 }
                 },
                 legend: {
                     display: false
@@ -356,6 +357,20 @@ function plotDetailedChart(canvasId, data, title) {
                     ticks: {
                         callback: value => `$${formatCurrency(value)}`
                     }
+                },
+                x: {
+                    ticks: {
+                        maxRotation: 45, // Angle the labels for better fit
+                        minRotation: 45
+                    }
+                }
+            },
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 30,
+                    top: 0,
+                    bottom: 10
                 }
             }
         }

@@ -173,7 +173,7 @@ h1 {
 /* Add specific styling for detailed charts */
 .detailed-chart {
     width: 95%;
-    height: 400px; /* Reduced from 600px */
+    height: 300px; /* Even shorter height */
     margin: 1rem auto; /* Center the charts */
     padding: 1rem;
 }
