@@ -347,7 +347,7 @@ function plotDetailedChart(canvasId, data, title) {
                     `hsla(${(i * 360 / data.length)}, 70%, 60%, 0.7)`
                 ),
                 borderWidth: 1,
-                barPercentage: 0.8,
+                barPercentage: 0.9,
                 categoryPercentage: 0.9
             }]
         },
@@ -388,10 +388,10 @@ function plotDetailedChart(canvasId, data, title) {
             },
             layout: {
                 padding: {
-                    left: 20,
-                    right: 40,
-                    top: 20,
-                    bottom: 40
+                    left: 10,
+                    right: 30,
+                    top: 10,
+                    bottom: 30
                 }
             }
         }
