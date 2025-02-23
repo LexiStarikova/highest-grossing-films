@@ -41,7 +41,7 @@ body {
 /* Chart styling */
 .chart-container {
     width: 100%;
-    height: 600px;
+    height: 600px;  /* Default height for bubble chart */
     padding: 1rem;
     background: white;
     border-radius: var(--border-radius);
@@ -49,6 +49,11 @@ body {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
+}
+
+/* Specific height for box office chart */
+#boxOfficeChart {
+    height: 400px !important;
 }
 
 /* Table styling */
@@ -110,7 +115,7 @@ canvas {
 .charts-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem;  /* Default gap */
     margin: 2rem 0;
 }
 
@@ -173,7 +178,7 @@ h1 {
 #detailedStats {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;  /* Reduced from 2rem */
     margin: 1rem 0;
     width: 100%;
 }
