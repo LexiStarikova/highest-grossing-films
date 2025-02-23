@@ -166,15 +166,15 @@ h1 {
 #detailedStats {
     display: flex;
     flex-direction: row !important; /* Force horizontal layout */
-    gap: 2rem;
+    gap: 1rem; /* Reduced gap between charts */
     justify-content: space-between;
     margin: 1rem 0;
 }
 
 /* Detailed statistics charts */
 .detailed-chart {
-    width: 47%; /* Allow two charts to fit side by side with gap */
-    height: 300px; /* Twice as tall as before */
+    width: 49%; /* Increased width from 47% to 49% */
+    height: 300px;
     padding: 0.5rem;
     background: white;
     border-radius: var(--border-radius);
