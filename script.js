@@ -165,7 +165,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: film.box_office / 100000000, // Simple division by billion
+            r: film.box_office / 50000000, // Simple division by a constant
             title: film.title,
             revenue: film.box_office
         }));
