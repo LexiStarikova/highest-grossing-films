@@ -2,6 +2,7 @@
 let films = []; // Global variable to store films data
 let statsVisible = false;
 let charts = {}; // Object to store chart instances
+let bubbleChart = null;  // Store bubble chart instance globally
 
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize UI elements
@@ -36,7 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add bubble chart regeneration
     document.getElementById('regenerateBubble').addEventListener('click', function() {
-        plotBoxOfficeChart(films); // This will recreate the bubble chart with new random y-values
+        if (bubbleChart) {
+            // Update y-values with new random values
+            bubbleChart.data.datasets[0].data.forEach(point => {
+                point.y = Math.random() * 100;
+            });
+            bubbleChart.update();
+        }
     });
 });
 
@@ -148,6 +155,11 @@ function plotBoxOfficeChart(films) {
     // Create bubble chart
     const bubbleCtx = document.getElementById("bubbleChart").getContext("2d");
     
+    // Destroy existing bubble chart if it exists
+    if (bubbleChart) {
+        bubbleChart.destroy();
+    }
+    
     // Use only top 20 films and apply 5th root scaling
     const bubbleData = [...films].sort((a, b) => b.box_office - a.box_office).slice(0, 20)
         .filter(film => film.box_office && film.release_year)
@@ -159,7 +171,7 @@ function plotBoxOfficeChart(films) {
             revenue: film.box_office
         }));
 
-    new Chart(bubbleCtx, {
+    bubbleChart = new Chart(bubbleCtx, {
         type: 'bubble',
         data: {
             datasets: [{
