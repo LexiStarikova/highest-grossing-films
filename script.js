@@ -116,7 +116,7 @@ function plotBoxOfficeChart(films) {
                 title: {
                     display: true,
                     text: ['Top 10 Highest-Grossing Films', '(Logarithmic Scale)'],
-                    font: { size: 16 }
+                    font: { size: 24 }
                 },
                 legend: {
                     display: false
@@ -329,7 +329,7 @@ function plotDetailedChart(canvasId, data, title) {
                 title: {
                     display: true,
                     text: title,
-                    font: { size: 16 }
+                    font: { size: 24 }
                 },
                 legend: {
                     display: false
