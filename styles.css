@@ -40,11 +40,13 @@ body {
 
 /* Chart styling */
 .chart-container {
+    width: 100%;
+    height: 600px;
+    padding: 2rem;
     background: white;
-    padding: 20px;
     border-radius: var(--border-radius);
-    margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 1rem 0;
 }
 
 /* Table styling */
@@ -105,16 +107,6 @@ canvas {
     margin: 2rem 0;
 }
 
-.chart-container {
-    width: 100%;
-    height: 600px;
-    padding: 2rem;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 1rem 0;
-}
-
 h1 {
     text-align: center;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
@@ -170,21 +162,13 @@ h1 {
     cursor: pointer;
 }
 
-/* Add specific styling for detailed charts */
+/* Detailed statistics charts */
 .detailed-chart {
     width: 95%;
-    height: 200px; /* Much shorter height */
-    margin: 1rem auto; /* Center the charts */
-    padding: 1rem;
-}
-
-/* Update general chart container if needed */
-.chart-container {
-    width: 100%;
-    height: 600px;
-    padding: 2rem;
+    height: 150px; /* Short height for detailed stats */
+    margin: 0.5rem auto;
+    padding: 0.5rem;
     background: white;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 1rem 0;
 }

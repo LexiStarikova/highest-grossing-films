@@ -149,7 +149,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.sqrt(film.box_office) / 50000, // Square root scaling with division
+            r: Math.sqrt(film.box_office) / 5000, // Square root scaling with division
             title: film.title,
             revenue: film.box_office
         }));
@@ -328,8 +328,8 @@ function plotDetailedChart(canvasId, data, title) {
                     `hsla(${(i * 360 / data.length)}, 70%, 60%, 0.7)`
                 ),
                 borderWidth: 1,
-                barPercentage: 0.8, // Make bars wider
-                categoryPercentage: 0.9 // Reduce gap between bars
+                barPercentage: 0.8,
+                categoryPercentage: 0.9
             }]
         },
         options: {
@@ -339,8 +339,8 @@ function plotDetailedChart(canvasId, data, title) {
                 title: {
                     display: true,
                     text: title,
-                    font: { size: 24 },
-                    padding: { bottom: 20 }
+                    font: { size: 20 },
+                    padding: { bottom: 10 }
                 },
                 legend: {
                     display: false
@@ -355,22 +355,24 @@ function plotDetailedChart(canvasId, data, title) {
                 y: {
                     beginAtZero: true,
                     ticks: {
-                        callback: value => `$${formatCurrency(value)}`
+                        callback: value => `$${formatCurrency(value)}`,
+                        font: { size: 11 }
                     }
                 },
                 x: {
                     ticks: {
-                        maxRotation: 45, // Angle the labels for better fit
-                        minRotation: 45
+                        maxRotation: 45,
+                        minRotation: 45,
+                        font: { size: 11 }
                     }
                 }
             },
             layout: {
                 padding: {
-                    left: 10,
-                    right: 30,
+                    left: 5,
+                    right: 15,
                     top: 0,
-                    bottom: 10
+                    bottom: 5
                 }
             }
         }
