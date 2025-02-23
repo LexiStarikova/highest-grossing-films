@@ -176,8 +176,8 @@ h1 {
 
 /* Detailed statistics charts */
 .detailed-chart {
-    width: 49.7%;
-    height: 500px;
+    width: 80%;
+    height: 350px;
     padding: 1rem;
     background: white;
     border-radius: var(--border-radius);
