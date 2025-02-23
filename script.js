@@ -42,7 +42,7 @@ function formatCurrency(value) {
 document.getElementById("search").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         let searchTerm = this.value.toLowerCase();
-        let rows = document.querySelectorAll("tbody tr");
+        let rows = document.querySelectorAll("#film-table-body tr");
         
         rows.forEach(row => {
             let title = row.cells[0].textContent.toLowerCase();
@@ -123,7 +123,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.max(Math.sqrt(film.box_office) / 1000, 5), // Minimum radius of 5
+            r: film.box_office, // Minimum radius of 5
             title: film.title,
             revenue: film.box_office
         }));
