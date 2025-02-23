@@ -70,22 +70,97 @@ function plotBoxOfficeChart(films) {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 title: {
                     display: true,
-                    text: 'Top 10 Highest-Grossing Films',
+                    text: ['Top 10 Highest-Grossing Films', '(Logarithmic Scale)'],
                     font: { size: 16 }
                 },
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => `Revenue: $${formatCurrency(context.raw)}`
+                    }
                 }
             },
             scales: {
                 y: {
-                    beginAtZero: true,
+                    type: 'logarithmic',
+                    beginAtZero: false,
                     ticks: {
                         callback: value => `$${formatCurrency(value)}`
                     }
+                }
+            }
+        }
+    });
+
+    // Create bubble chart
+    const bubbleCtx = document.getElementById("bubbleChart").getContext("2d");
+    
+    // Generate random y-values between 1-100 for visual spread
+    const bubbleData = films.map(film => ({
+        x: film.release_year,
+        y: Math.random() * 100,
+        r: Math.sqrt(film.box_office) / 100000, // Scale the radius based on box office
+        title: film.title,
+        revenue: film.box_office
+    }));
+
+    new Chart(bubbleCtx, {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                data: bubbleData,
+                backgroundColor: bubbleData.map((_, i) => 
+                    `hsla(${(i * 360 / bubbleData.length)}, 70%, 60%, 0.7)`
+                ),
+                hoverBackgroundColor: bubbleData.map((_, i) => 
+                    `hsla(${(i * 360 / bubbleData.length)}, 70%, 60%, 0.9)`
+                )
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Films by Year and Box Office Revenue',
+                    font: { size: 16 }
+                },
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => {
+                            const point = context.raw;
+                            return [
+                                `Title: ${point.title}`,
+                                `Year: ${point.x}`,
+                                `Revenue: $${formatCurrency(point.revenue)}`
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Release Year'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Distribution'
+                    },
+                    beginAtZero: true
                 }
             }
         }
@@ -128,14 +203,3 @@ function applyFilters() {
         row.style.display = showRow ? '' : 'none';
     });
 }
-
-// Add search functionality
-document.getElementById('search-input').addEventListener('input', function() {
-    const searchTerm = this.value.toLowerCase().trim();
-    const rows = document.querySelectorAll('#film-table-body tr');
-    
-    rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(searchTerm) ? '' : 'none';
-    });
-});
