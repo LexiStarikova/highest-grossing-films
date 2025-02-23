@@ -143,8 +143,8 @@ function plotBoxOfficeChart(films) {
     // Create bubble chart
     const bubbleCtx = document.getElementById("bubbleChart").getContext("2d");
     
-    // Use only top 10 films and apply 5th root scaling
-    const bubbleData = sortedFilms
+    // Use only top 20 films and apply 5th root scaling
+    const bubbleData = [...films].sort((a, b) => b.box_office - a.box_office).slice(0, 20)
         .filter(film => film.box_office && film.release_year)
         .map(film => ({
             x: parseInt(film.release_year),
@@ -173,7 +173,7 @@ function plotBoxOfficeChart(films) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Top 10 Films by Year and Box Office Revenue (Bubble size: 5th root scale)',
+                    text: 'Top 20 Films by Year and Box Office Revenue (Bubble size: 5th root scale)',
                     font: { size: 24 }
                 },
                 legend: {
