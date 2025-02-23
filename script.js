@@ -128,7 +128,7 @@ function plotBoxOfficeChart(films) {
             plugins: {
                 title: {
                     display: true,
-                    text: ['Top 10 Highest-Grossing Films', '(Logarithmic Scale)'],
+                    text: 'Top 10 Highest-Grossing Films',
                     font: { size: 24 }
                 },
                 legend: {
@@ -142,8 +142,7 @@ function plotBoxOfficeChart(films) {
             },
             scales: {
                 y: {
-                    type: 'logarithmic',
-                    beginAtZero: false,
+                    beginAtZero: true,
                     ticks: {
                         callback: value => `$${formatCurrency(value)}`
                     }
@@ -155,12 +154,10 @@ function plotBoxOfficeChart(films) {
     // Create bubble chart
     const bubbleCtx = document.getElementById("bubbleChart").getContext("2d");
     
-    // Destroy existing bubble chart if it exists
     if (bubbleChart) {
         bubbleChart.destroy();
     }
     
-    // Create bubble chart data and configuration
     const bubbleData = [...films]
         .sort((a, b) => b.box_office - a.box_office)
         .slice(0, 20)
@@ -168,7 +165,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.pow(film.box_office, 1/5) / 2,
+            r: film.box_office / 100000000, // Simple division by billion
             title: film.title,
             revenue: film.box_office
         }));
@@ -192,7 +189,7 @@ function plotBoxOfficeChart(films) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Top 20 Films by Year and Box Office Revenue (Bubble size: 5th root scale)',
+                    text: 'Top 20 Films by Year and Box Office Revenue (Bubble size: billions)',
                     font: { size: 24 }
                 },
                 legend: {
