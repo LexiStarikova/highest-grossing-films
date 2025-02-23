@@ -144,16 +144,14 @@ function plotBoxOfficeChart(films) {
     
     // Filter out invalid data and generate bubble data
     const bubbleData = films
-        .filter(film => film.box_office && film.release_year) // Ensure we have valid data
+        .filter(film => film.box_office && film.release_year)
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: Math.sqrt(film.box_office) / 1000000, 
+            r: Math.log10(film.box_office) / 2, // Apply logarithm for better bubble sizing
             title: film.title,
             revenue: film.box_office
         }));
-
-    console.log('Bubble data:', bubbleData); // Debug log
 
     new Chart(bubbleCtx, {
         type: 'bubble',
@@ -174,8 +172,8 @@ function plotBoxOfficeChart(films) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Films by Year and Box Office Revenue',
-                    font: { size: 16 }
+                    text: 'Films by Year and Box Office Revenue (Bubble size: log scale)',
+                    font: { size: 24 }
                 },
                 legend: {
                     display: false
@@ -268,20 +266,25 @@ function aggregateData(films, groupKey, valueKey, aggregationType) {
     const data = new Map();
     
     films.forEach(film => {
-        const items = film[groupKey].split(/,\s*/);
+        // Fix the splitting to handle various formats
+        const items = film[groupKey].split(/[,/]/).map(item => item.trim());
         items.forEach(item => {
+            if (!item) return; // Skip empty items
             if (!data.has(item)) {
                 data.set(item, []);
             }
-            data.get(item).push(film[valueKey]);
+            data.get(item).push(Number(film[valueKey])); // Ensure numbers
         });
     });
     
     // Calculate aggregation
-    const aggregated = Array.from(data.entries()).map(([key, values]) => ({
-        name: key,
-        value: calculateAggregation(values, aggregationType)
-    }));
+    const aggregated = Array.from(data.entries())
+        .filter(([_, values]) => values.length > 0) // Filter out empty arrays
+        .map(([key, values]) => ({
+            name: key,
+            value: calculateAggregation(values, aggregationType)
+        }))
+        .filter(item => !isNaN(item.value)); // Filter out NaN values
     
     // Sort and get top 10
     return aggregated
@@ -290,6 +293,8 @@ function aggregateData(films, groupKey, valueKey, aggregationType) {
 }
 
 function calculateAggregation(values, type) {
+    if (!values.length) return 0;
+    
     switch(type) {
         case 'max':
             return Math.max(...values);
@@ -304,6 +309,7 @@ function calculateAggregation(values, type) {
 
 function plotDetailedChart(canvasId, data, title) {
     const ctx = document.getElementById(canvasId).getContext('2d');
+    console.log('Plotting chart:', canvasId, 'with data:', data); // Debug log
     
     // Destroy existing chart if it exists
     if (window[canvasId]) {
