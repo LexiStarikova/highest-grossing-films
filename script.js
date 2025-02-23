@@ -1,8 +1,12 @@
+// Add this at the top level of your script
+let films = []; // Global variable to store films data
+
 // Load and display films from JSON file
 document.addEventListener("DOMContentLoaded", function () {
     fetch("films.json")
         .then(response => response.json())
         .then(data => {
+            films = data; // Store the data globally
             displayFilms(data);
         })
         .catch(error => console.error("Error loading data:", error));
@@ -123,7 +127,7 @@ function plotBoxOfficeChart(films) {
         .map(film => ({
             x: parseInt(film.release_year),
             y: Math.random() * 100,
-            r: film.box_office / 100000, 
+            r: film.box_office / 1000000000, 
             title: film.title,
             revenue: film.box_office
         }));
@@ -245,6 +249,10 @@ aggregationSelect.addEventListener('change', function() {
 });
 
 function updateDetailedStats(aggregationType) {
+    // Add console.log for debugging
+    console.log('Updating stats with:', aggregationType);
+    console.log('Films data:', films);
+    
     const companiesData = aggregateData(films, 'production_companies', 'box_office', aggregationType);
     const directorsData = aggregateData(films, 'directors', 'box_office', aggregationType);
     
